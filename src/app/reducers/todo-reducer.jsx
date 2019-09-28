@@ -1,3 +1,5 @@
+// @flow
+
 const initialState = {
     todoList : [
         {
@@ -20,8 +22,9 @@ const initialState = {
     title   : 'To do list'
 };
 
+type State = Object
 
-function todoReducer(state = initialState, action) {
+function todoReducer(state: State = initialState, action: Object) {
     switch (action.type) {
         case 'SAVE_ASSIGN_WINDOW' :
 
