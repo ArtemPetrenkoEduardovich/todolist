@@ -1,9 +1,15 @@
+// @flow
+
 const React       = require("react");
 const ReactDOM    = require('react-dom');
 const connect     = require('react-redux').connect;
 const todoActions = require('../../actions/todo-actions.jsx');
 
-class DialogWindow extends React.Component {
+class DialogWindow extends React.Component<{
+    closeDialog: Object,
+    closeDialogAndAssign: Object,
+    dialogReducer: Object    
+    }> {
 
     constructor(props) {
         super(props);
@@ -18,7 +24,9 @@ class DialogWindow extends React.Component {
     }
 
     render() {
-        if (this.props.dialogReducer.dialog) {
+        const dialogContainer = document.getElementById("dialog-container");
+        
+        if (this.props.dialogReducer.dialog && dialogContainer !== null) {
             return ReactDOM.createPortal(
                 <>
                     <div className="canvas"/>
@@ -28,7 +36,7 @@ class DialogWindow extends React.Component {
                         <input type="submit" value="No" onClick={this.clickNo.bind(this)}/>
                     </div>
                 </>,
-                document.getElementById("dialog-container")
+                dialogContainer
             );
         } else {return null;}
     }

@@ -1,10 +1,10 @@
-
+// @flow
 
 const React = require("react");
 
-class OptionUser extends React.Component {
+class OptionUser extends React.Component<{user: Object}> {
 
-    constructor(props) {
+    constructor(props: Object) {
         super(props);
     }
 
