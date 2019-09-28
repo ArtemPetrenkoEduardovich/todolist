@@ -1,9 +1,15 @@
+// @flow
+
 var React = require("react");
 var Item = require('./Item.jsx');
 
-class ItemList extends React.Component {
+class ItemList extends React.Component<{
+        todoList: Array<Object>,
+        openAssignWindow: Object,
+        deleteItem: Object
+    }> {
 
-    constructor(props){
+    constructor(props: Object){
         super(props);
     }
 

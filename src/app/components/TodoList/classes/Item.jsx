@@ -1,9 +1,23 @@
+// @flow
 
 var React = require("react");
 
-class Item extends React.Component {
+class Item extends React.Component<{
+        openAssignWindow: Object,
+        todo: string,
+        todo_id: number,
+        assigned_users: Array<number>,
+        deleteItem: Object
+    }, {
+        class: string,
+        count: number
+    }> {
 
-    constructor(props) {
+    onMouseEnterHandler: () => Object;
+    onMouseLeaveHandler: () => Object;
+    openAssignWindow: () => Object;
+
+    constructor(props: Object) {
         super(props);
         this.onMouseEnterHandler = this.onMouseEnterHandler.bind(this);
         this.onMouseLeaveHandler = this.onMouseLeaveHandler.bind(this);
@@ -15,7 +29,7 @@ class Item extends React.Component {
         };
     }
 
-    componentWillReceiveProps(nextProps) {
+    componentWillReceiveProps(nextProps: Object) {
         let count = nextProps.assigned_users.length;
         this.setState({
             class : "",
