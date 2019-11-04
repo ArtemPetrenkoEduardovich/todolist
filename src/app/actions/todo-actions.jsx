@@ -56,7 +56,12 @@ const openAssignWindow = function(todo: string, todo_id: number, assigned_users:
     }
 }
 
-const saveAssignWindow = function(userList: Array<Object>, last_id: number, assigned_users: Array<number>, todo_id: number) {
+const saveAssignWindow = function(
+        userList: Array<Object>, 
+        last_id: number, 
+        assigned_users: Array<number>, 
+        todo_id: number
+    ) {
     return {
         type: "SAVE_ASSIGN_WINDOW",
         userList,
