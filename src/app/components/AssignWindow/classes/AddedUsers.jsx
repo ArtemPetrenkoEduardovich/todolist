@@ -1,9 +1,15 @@
+// @flow
+
 const React = require("react");
 const AddedUser = require('./AddedUser.jsx');
 
-class AddedUsers extends React.Component {
+class AddedUsers extends React.Component <{
+        assigned_users: Array<number>, 
+        userList: Array<Object>,
+        unassignUser: Object
+    }> {
 
-    constructor(props) {
+    constructor(props: Object) {
         super(props);
     }
 
@@ -15,31 +21,13 @@ class AddedUsers extends React.Component {
                 (this.props.userList.map(user =>
                     user.id === el ?
                         <AddedUser key={user.id}
-                                   todo={this.props.assignWindowReducer.todo}
+                                //    todo={this.props.assignWindowReducer.todo}
                                    user={user}
                                    unassignUser={this.props.unassignUser}
                         />
                         : null
                 ))
             )
-
-
-            // this.props.todoList.map( (item) => (
-            //     (item.id === this.props.assignWindowReducer.todo_id) ?
-            //         item.assigned_users.map((el) => (
-            //             this.props.userList.map(
-            //                 user => el === user.id ?
-            //                     <AddedUser key={user.id}
-            //                                todo={item}
-            //                                user={user}
-            //                                unassignUser={this.props.unassignUser}
-            //                     />
-            //                     : null
-            //             )
-            //             )
-            //         ): null
-            //     )
-            // )
             }
             </div>
         );

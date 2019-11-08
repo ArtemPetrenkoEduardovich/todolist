@@ -1,3 +1,5 @@
+// @flow
+
 const initialState = {
     todoList : [
         {
@@ -20,8 +22,9 @@ const initialState = {
     title   : 'To do list'
 };
 
+type State = Object
 
-function todoReducer(state = initialState, action) {
+function todoReducer(state: State = initialState, action: Object) {
     switch (action.type) {
         case 'SAVE_ASSIGN_WINDOW' :
 
@@ -61,6 +64,25 @@ function todoReducer(state = initialState, action) {
                 todoList : state.todoList.filter((item) => item.id !== action.todo_id)
             };
 
+        default:
+            return state;
+    }
+}
+
+module.exports = todoReducer;
+
+
+
+
+
+
+
+
+
+
+
+
+
         // case 'ASSIGN_USER':
         //     state.todoList.map(
         //       elem => elem.id === action.todo_id ? elem.assigned_users.push(Number(action.user_id)) : null
@@ -82,10 +104,3 @@ function todoReducer(state = initialState, action) {
         //             return item;
         //         })
         //     };
-
-        default:
-            return state;
-    }
-}
-
-module.exports = todoReducer;

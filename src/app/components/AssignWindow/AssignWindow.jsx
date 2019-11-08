@@ -1,3 +1,5 @@
+// @flow
+
 const React        = require("react");
 const ReactDOM     = require('react-dom');
 const connect      = require('react-redux').connect;
@@ -6,7 +8,28 @@ const UserList     = require('./classes/UserList.jsx');
 const AddedUsers   = require('./classes/AddedUsers.jsx');
 
 
-class AssignWindow extends React.Component {
+class AssignWindow extends React.Component<{
+        userList: Array<Object>,
+        last_id: number,
+        assignWindowReducer: Object,
+        assigned_users: Array<number>,
+        assignUser: Object,
+        unassignUser: Object,
+        showDialog: Object,
+        saveAssignWindow: Object
+    }, {
+        userList: Array<Object>,
+        last_id: number,
+        assignWindowReducer: Object,
+        assigned_users: Array<number>,
+        assignUser: Object,
+        unassignUser: Object
+    }> {
+
+    onKeyDownHandler: () => Object;
+    assignUser: () => Object;
+    unassignUser: () => Object;
+    saveClick: () => Object;
 	
 	constructor(props) {
 		super(props);
@@ -45,9 +68,9 @@ class AssignWindow extends React.Component {
 		}
 	}
 
-    assignUser (user_id) {
+    assignUser (user_id: number) {
         this.setState({
-            assigned_users : [...this.state.assigned_users, Number(user_id)]
+            assigned_users : [...this.state.assigned_users, user_id]
         });
     }
 
@@ -71,7 +94,9 @@ class AssignWindow extends React.Component {
     }
 
   	render() {
-		if (this.props.assignWindowReducer.isOpen) {
+        const assignContainer = document.getElementById("assign-container");
+
+		if (this.props.assignWindowReducer.isOpen && assignContainer !== null) {
             return ReactDOM.createPortal(
                 <>
                     <div className="canvas"/>
@@ -96,14 +121,14 @@ class AssignWindow extends React.Component {
                         </div>
                     </div>
                 </>,
-                document.getElementById("assign-container")
+                assignContainer
             );
         } else {return null;}
 	}
 }
 
 
-function mapStateToProps(state) {
+function mapStateToProps(state: Object) {
     return {
         todoList            : state.todoReducer.todoList,
         userList            : state.userReducer.userList,

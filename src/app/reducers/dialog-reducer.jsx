@@ -1,9 +1,12 @@
+// @flow
+
 const initialState = {
     dialog : false
 };
 
+type State = Object
 
-function dialogReducer(state = initialState, action) {
+function dialogReducer(state : State = initialState, action: Object) {
 
     switch (action.type) {
 

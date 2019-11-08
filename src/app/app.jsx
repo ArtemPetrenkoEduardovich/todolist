@@ -1,3 +1,5 @@
+// @flow 
+
 require('../css/style.css');
 
 const React        = require('react');
@@ -16,7 +18,7 @@ store.subscribe(() => {
 	console.log(store.getState());
 })
 
-class App extends React.Component {
+class App extends React.Component<{}> {
     render() {
         return (
             <>
@@ -27,10 +29,15 @@ class App extends React.Component {
         );
     }
 }
- 
-ReactDOM.render(
-    <Provider store={store}>
-        <App />
-    </Provider>,
-    document.getElementById("main-container")
-);
+
+
+const mainContainer = document.getElementById("main-container");
+
+if (mainContainer !== null) {
+    ReactDOM.render(
+        <Provider store={store}>
+            <App />
+        </Provider>,
+        mainContainer
+    );
+}

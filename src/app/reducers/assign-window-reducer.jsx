@@ -1,3 +1,5 @@
+// @flow
+
 const initialState = {
     isOpen         : false,
     todo           : undefined,
@@ -5,9 +7,10 @@ const initialState = {
     assigned_users : []
 };
 
+type State = Object
 
-function assignWindowReducer(state = initialState, action) {
-
+function assignWindowReducer(state : State = initialState, action: Object) {
+    
     switch (action.type) {
 
         case 'CLOSE_DIALOG_AND_ASSIGN' :

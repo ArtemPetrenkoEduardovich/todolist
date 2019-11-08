@@ -1,3 +1,5 @@
+// @flow
+
 const initialState = {
     userList : [
         {
@@ -28,8 +30,9 @@ const initialState = {
     last_id : 5
 };
 
+type State = Object
 
-function userReducer(state = initialState, action) {
+function userReducer(state : State = initialState, action: Object) {
     switch (action.type) {
         case 'SAVE_ASSIGN_WINDOW' :
             return {

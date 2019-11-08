@@ -1,8 +1,15 @@
+// @flow
+
 var React = require("react");
 
-class ToDoListForm extends React.Component {
+class ToDoListForm extends React.Component<{
+        addItem: Object,
+        title: string
+    }> {
 
-    constructor(props) {
+    onKeyDownHandler: () => Object;
+
+    constructor(props: Object) {
         super(props);
         this.onKeyDownHandler = this.onKeyDownHandler.bind(this);
     }
@@ -15,7 +22,7 @@ class ToDoListForm extends React.Component {
         }
     }
 
-    onKeyDownHandler(e) {
+    onKeyDownHandler(e: Object) {
         if (e.keyCode === 13) this.onClick();
     }
 

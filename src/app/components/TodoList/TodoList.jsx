@@ -1,3 +1,5 @@
+// @flow
+
 const React        = require('react');
 const connect      = require('react-redux').connect;
 const todoActions  = require('../../actions/todo-actions.jsx');
@@ -5,7 +7,13 @@ const ToDoListForm = require('./classes/ToDoListForm.jsx');
 const ItemList     = require('./classes/ItemList.jsx');
 
 
-class TodoList extends React.Component {
+class TodoList extends React.Component<{
+        addItem: Object,
+        title: string,
+        todoList: Array<Object>,
+        openAssignWindow: Object,
+        deleteItem: Object
+    }> {
  
     render() {
         return (
