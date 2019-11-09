@@ -19,8 +19,8 @@ class UserList extends React.Component <{
     handleChange(event: Object) {
         var index = event.target.selectedIndex;
         var optionElement = event.target.childNodes[index];
-        var user_id =  optionElement.getAttribute('data-id');
-        this.props.assignUser(user_id);
+        var user_id = optionElement.getAttribute('data-id');
+        this.props.assignUser(Number(user_id));
     }
 
     render() {
