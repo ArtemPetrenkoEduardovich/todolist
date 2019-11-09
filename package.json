@@ -10,6 +10,8 @@
     },
     "dependencies": {
         "immutable": "^3.8.2",
+        "less": "^3.10.3",
+        "less-loader": "^5.0.0",
         "react": "^16.10.0",
         "react-dom": "^16.10.0",
         "react-redux": "^5.0.7",

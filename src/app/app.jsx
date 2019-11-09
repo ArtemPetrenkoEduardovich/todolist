@@ -1,6 +1,6 @@
 // @flow 
 
-require('../css/style.css');
+require('../css/main.less');
 
 const React        = require('react');
 const ReactDOM     = require('react-dom');
