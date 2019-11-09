@@ -1,6 +1,8 @@
 // @flow 
 
-require('../css/style.css');
+// $FlowFixMe 
+require('../css/main.less');
+
 
 const React        = require('react');
 const ReactDOM     = require('react-dom');

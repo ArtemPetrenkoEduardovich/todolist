@@ -29,8 +29,10 @@ module.exports = {
                 }
             },
             {
-                test: /\.css?$/,
-                loader: 'style-loader!css-loader'
+                // test: /\.css?$/,
+                test: /\.less?$/,
+                exclude: /(node_modules)/,
+                loader: 'style-loader!css-loader!less-loader'
             }
         ]
     }
