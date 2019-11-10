@@ -1,0 +1,135 @@
+
+// #main-container {
+
+//     #todolist, #todo, input, div {
+//         border-radius: @bord_rad;
+//     }
+// }
+
+#todolist {
+	width: 850px;
+	margin: 10px auto;
+	background-color: #6e7376;
+	padding-bottom: 10px;
+}
+
+#todo {
+	padding: 20px;
+	background-color: #f58730;
+}
+
+#todo h2{
+	color: #2f3a50;
+	font-size: 36px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+#todo h2+input{
+	width: 740px;
+	height: 35px;
+}
+
+#todo input:last-child{
+	cursor: pointer;
+	height: 35px;
+	width: 60px;
+	border-style: none;
+	background-color: #2f3a50;
+	color: white;
+	margin-left: 4px;
+	transition: all 0.2s ease;
+}
+
+#todo input:last-child:hover{
+	background-color: #4b5d82;
+}
+
+#todo input:last-child:active{
+	margin-top: 2px;
+	height: 26px;
+}
+
+#todo input {
+	font-size: 22px;
+}
+
+#list {
+	word-wrap: break-word;
+	margin-top: 20px;
+	overflow: hidden;
+}
+
+.nameOfItem {
+	font-size: 18px;
+	margin-left: 20px;
+	margin-bottom: 10px;
+	margin-right: 5px;
+	background: #88a2b5;
+	width: 640px;
+	float: left;
+	padding-left: 30px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	height: 30px;
+}
+
+.deleteButton{
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+	margin-left: 5px;
+	background-color: #ffb1b1;
+	height: 30px;
+	width: 60px;
+	border-style: none;
+	float: left;
+}
+
+.deleteButton:hover{
+	background-color: #fd3434;
+}
+
+.deleteButton:active{
+	margin-top: 2px;
+	height: 26px;
+}
+
+.assignButton{
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+	margin-left: 5px;
+	height: 30px;
+	width: 60px;
+	border-style: none;
+	float: left;
+}
+
+.assignButton:hover{
+	background-color: white;
+}
+
+.item {
+	/*margin-bottom: 10px;*/
+	width: 850px;
+	min-height: 35px;
+}
+
+.countOfAssignedUsers{
+	text-align: center;
+	vertical-align: middle;
+	float: left;
+	width: 30px;
+	height: 30px;
+	background-color: #f58730;
+	padding: 5px;
+}
+
+.countOfAssignedUsers h6{
+	font-size: 10px;
+	display: inline-block;
+}
+
+
+.strikethrough {
+	text-decoration: line-through;
+}
