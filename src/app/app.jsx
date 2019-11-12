@@ -1,6 +1,5 @@
 // @flow 
 
-// $FlowFixMe 
 require('../css/main.less');
 
 

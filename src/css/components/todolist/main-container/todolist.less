@@ -10,37 +10,37 @@
 	padding: 20px;
 	margin-bottom: 20px;
 	background-color: #f58730;
-}
+	
+	h2{
+		font-size: 120px;
+		color: #2f3a50;
+		text-align: center;
+		margin-bottom: 20px;
+	}
 
-#todo h2{
-	font-size: 120px;
-	color: #2f3a50;
-	text-align: center;
-	margin-bottom: 20px;
-}
+	input:nth-of-type(1){
+		width: 80%;
+		height: 100px;
+		margin-right: 15px;
+	}
 
-#todo input:nth-of-type(1){
-	width: 80%;
-	height: 100px;
-	margin-right: 15px;
-}
+	input:nth-of-type(2){
+		width: 18%;
+		height: 100px;
+		border-style: none;
+		background-color: #2f3a50;
+		color: white;
+		transition: all 0.2s ease;
+	}
 
-#todo input:nth-of-type(2){
-	width: 18%;
-	height: 100px;
-	border-style: none;
-	background-color: #2f3a50;
-	color: white;
-	transition: all 0.2s ease;
-}
+	input{
+		font-size: 60px;
+	}
 
-#todo input{
-	font-size: 60px;
-}
-
-#todo input:nth-of-type(2):active{
-	margin-top: 0px;
-	height: 85px;
+	input:nth-of-type(2):active{
+		margin-top: 0px;
+		height: 85px;
+	}
 }
 
 #list {
@@ -67,15 +67,19 @@
 .assignButton, .deleteButton, .countOfAssignedUsers{
 	height: 140px;
 	font-size: 30px;
+	float: left;
+}
+
+.assignButton, .deleteButton{
+	width: 100px;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+	border-style: none;
+	margin-left: 5px;
 }
 
 .deleteButton {
-	margin-left: 5px;
-	cursor: pointer;
-	transition: background-color 0.2s ease;
 	background-color: #ffb1b1;
-	border-style: none;
-	float: left;
 }
 
 .deleteButton:active{
@@ -83,31 +87,13 @@
 	height: 140px;
 }
 
-.assignButton{
-	margin-left: 5px;
-	cursor: pointer;
-	transition: background-color 0.2s ease;
-	border-style: none;
-	float: left;
-}
-
-.assignButton, .deleteButton{
-	width: 100px;
-}
-
 .countOfAssignedUsers{
 	width: 70px;
 	padding-top: 50px;
 	text-align: center;
 	vertical-align: middle;
-	float: left;
 	background-color: #f58730;
 	padding-top: 55px;
-}
-
-.countOfAssignedUsers h6{
-	font-size: 30px;
-	// display: inline-block;
 }
 
 .strikethrough {
@@ -117,20 +103,22 @@
 
 
 @media (min-device-width: 768px) {
+	
 	#todolist {
 		width: 850px;
 		margin: 10px auto;
 	}
 
-	#todo h2{
-		font-size: 36px;
-		// font-weight: 700;
-	}
+	#todo {
+		h2 {
+			font-size: 36px;
+		}
 
-	#todo h2+input{
-		margin-right: 0px!important;
-		width: 740px!important;
-		height: 35px!important;
+		h2+input{
+			margin-right: 0px!important;
+			width: 740px!important;
+			height: 35px!important;
+		}
 	}
 
 	#todo input:last-child{
@@ -166,11 +154,14 @@
 		height: 30px;
 	}
 
-	.deleteButton{
+	.deleteButton, .assignButton {
 		font-size: 14px;
-		margin-left: 5px;
 		height: 30px;
 		width: 60px;
+	}
+
+	.deleteButton{
+		margin-left: 5px;
 	}
 
 	.deleteButton:hover{
@@ -180,12 +171,6 @@
 	.deleteButton:active{
 		margin-top: 2px;
 		height: 26px;
-	}
-
-	.assignButton{
-		font-size: 14px;
-		height: 30px;
-		width: 60px;
 	}
 
 	.assignButton:hover{

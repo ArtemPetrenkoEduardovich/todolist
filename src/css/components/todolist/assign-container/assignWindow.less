@@ -1,15 +1,17 @@
+
 #assign-window h2{
 	word-wrap: break-word;
 	color: white;
 	font-weight: 700;
-	font-size: 28px;
+	font-size: 80px;
+	width: 91%;
 }
 
 #assign-window {
-	width: 500px;
-	left: 50%;
-	margin-left:-250px;
-	top: 70px;
+	width: 100%;
+	margin-left:0px;
+	left: 0px;
+	top: 0px;
 	background-color: #6e7376;
 	padding: 20px;
 	opacity: 1;
@@ -17,19 +19,13 @@
 }
 
 #close-assign {
-	position: absolute;
 	top: 10px;
-	right: 5px;
-	width: 30px;
-	height: 30px;
+	right: 60px;
+	font-size: 100px;
+	position: absolute;
 	cursor: pointer;
-	font-size: 30px;
 	float: right;
 	color: white;
-}
-
-#close-assign:hover {
-	color: red;
 }
 
 #user-list {
@@ -38,62 +34,117 @@
 }
 
 #user-list select{
-	width: 460px;
-	height: 30px;
-	font-size: 20px;
+	width: 99%;
+	height: 100px;
+	font-size: 50px;
 }
 
 #new-user {
 	margin-top: 15px;
-	width: 460px;
-	height: 30px;
-	font-size: 20px;
+	width: 99%;
+	height: 100px;
+	font-size: 50px;
 }
 
 #added-users {
 	margin-top: 15px;
-	background-color: #f58730;
 	padding: 10px;
-	padding-bottom: 0px; 
-	font-size: 20px;
+	padding-bottom: 0px;
+	width: 99%;
+	font-size: 50px;
+	background-color: #f58730;
 }
-
-#added-users span{
+	
+#added-users span {
 	display: inline-block;
 	color: #2f3a50;
-	margin-right: 30px;
-	margin-bottom: 10px;
 	white-space: pre;
 	cursor: pointer;
-}
-
-#added-users span:hover{
-	text-decoration: line-through;
-	color: red;
+	margin-right: 30px;
+	margin-bottom: 10px;
 }
 
 #btns-block {
-	width: 240px;
+	width: 900px;
 	margin: 40px auto;
-	margin-bottom: 0px;
+	margin-left: 50px;
 }
 
 #btns-block input{
-	width: 100px;
-	height: 30px;
-	cursor: pointer;
-	font-size: 16px;
-	border-style: none;
+	width: 400px;
+	height: 80px;
+	font-size: 40px;
 }
 
 #btns-block input:first-child{
 	margin-right: 35px;
 }
 
-#btns-block input:first-child:hover{
-	background-color: #88bb73
-}
+@media (min-device-width: 768px) {
 
-#btns-block input:last-child:hover{
-	background-color: #ffb1b1;
+	#assign-window h2{
+		font-size: 28px;
+	}
+
+	#assign-window {
+		width: 500px;
+		left: 50%;
+		margin-left:-250px;
+		top: 70px;
+	}
+	
+	#close-assign {
+		top: 10px;
+		right: 5px;
+		width: 30px;
+		height: 30px;
+		font-size: 30px;
+	}
+	
+	#close-assign:hover {
+		color: red;
+	}
+	
+	#user-list select{
+		width: 460px;
+		height: 30px;
+		font-size: 20px;
+	}
+	
+	#new-user {
+		width: 460px;
+		height: 30px;
+		font-size: 20px;
+	}
+	
+	#added-users { 
+		font-size: 20px;
+	}
+	
+	#added-users span:hover{
+		text-decoration: line-through;
+		color: red;
+	}
+	
+	#btns-block {
+		width: 240px;
+		margin: 40px auto;
+		margin-bottom: 0px;
+	}
+	
+	#btns-block input{
+		width: 100px;
+		height: 30px;
+		cursor: pointer;
+		font-size: 16px;
+		border-style: none;
+	}
+	
+	#btns-block input:first-child:hover{
+		background-color: #88bb73
+	}
+	
+	#btns-block input:last-child:hover{
+		background-color: #ffb1b1;
+	}
 }
